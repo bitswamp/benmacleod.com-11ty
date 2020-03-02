@@ -1,0 +1,85 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,600);
+
+html {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    align-items: left;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.5em;
+    justify-content: center;
+    margin: 0 0.5em;
+    min-height: 100%;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 0.5em;
+}
+
+h1, h2 {
+    font-size: 1.3em;
+    font-weight: normal;
+    margin: 0.3em;
+    padding: 0;
+}
+
+.name {
+    color: #444;
+}
+
+.job {
+    color: #777;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0 0.3em;
+    padding: 0;
+}
+
+.links li {
+    /* height: 4.5em; */
+    margin: 0.1em 0.3em;
+    /* width: 5em; */
+}
+
+a {
+    border: 3px solid white;
+    border-radius: 8px;
+    color: #1a8bf0;
+    display: inline-block;
+    font-size: 1.3em;
+    line-height: 1.4em;
+    padding: 0.2em 0.3em;
+    text-decoration: none;
+    text-align: left;
+    transition: border-color 0.5s ease;
+}
+
+a span.fa {
+    color: #1a8bf0;
+    display: inline-block;
+    font-size: 1.2em;
+    padding-right: 0.2em;
+    /* padding-top: 0.1em; */
+}
+
+a:hover {
+    border-color: #1a8bf0;
+}
+a:focus {
+    border-color: #1a8bf0;
+}
+a:visited {
+    color: #1a8bf0;
+}
