@@ -11,5 +11,8 @@
   "license": "ISC",
   "devDependencies": {
     "@11ty/eleventy": "^0.10.0"
+  },
+  "dependencies": {
+    "feather-icons": "^4.26.0"
   }
 }

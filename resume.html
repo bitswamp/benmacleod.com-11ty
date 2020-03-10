@@ -7,139 +7,93 @@ layout: layout
         <div>
             <dt>Email</dt>
             <dd>
-                <a href="mailto:benmacleod@gmail.com" aria-label="email address">
-                    benmacleod@gmail.com
+                <a href="mailto:{{ contact.email }}" aria-label="email address">
+                    {{ contact.email }}
                 </a>
             </dd>
         </div>
         <div>
             <dt>Website</dt>
             <dd>
-                <a href="https://benmacleod.com" aria-label="personal homepage">
-                    https://benmacleod.com
+                <a href="{{ contact.website }}" aria-label="personal homepage">
+                    {{ contact.website }}
                 </a>
             </dd>
         </div>
         <div>
             <dt>Github</dt>
             <dd>
-                <a href="https://github.com/bitswamp" class="github" aria-label="github account">
-                    bitswamp
+                <a href="https://github.com/{{ contact.github }}" class="github" aria-label="github account">
+                    {{ contact.github }}
                 </a>
             </dd>
         </div>
     </dl>
     <div id="download-pdf" class="no-print">
         <a href="ben_macleod_software_developer_resume.pdf">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                class="feather feather-file-text">
-                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                <polyline points="14 2 14 8 20 8"></polyline>
-                <line x1="16" y1="13" x2="8" y2="13"></line>
-                <line x1="16" y1="17" x2="8" y2="17"></line>
-                <polyline points="10 9 9 9 8 9"></polyline>
-            </svg>Download resume as PDF
+            {% include feather.html, icon: "file-text" %}
+            Download resume as PDF
         </a>
     </div>
 </section>
 <section id="about">
     <h3>About</h3>
-    <p>I'm a full-stack developer living in Halifax, NS and working remotely. My experience is focused on Python,
-        Javascript and .NET. I enjoy building CI/CD pipelines, putting apps in Docker containers, and writing
-        documentation for developers or users.</p>
-    <p>Since 2016 I've been building APIs that power <a href="https://resulta.com">resulta's</a> portfolio of sites
-        including <a href="https://www.thelinebacker.com">The Linebacker</a>.</p>
+    {% for para in about %}
+        <p>{{ para }}</p>
+    {% endfor %}
 </section>
 <section id="work">
     <h3>Work</h3>
-    <section class="work-entry">
-        <header>
-            <h4 class="position">
-                Backend Software Developer at <a href="https://resulta.com">resulta</a>
-            </h4>
-            <span class="line"></span>
-            <span class="date">2016 &mdash; Present</span>
-        </header>
-        <section>
-            <ul>
-                <li>Took a GraphQL api from concept to production on time to support new product launch in 2018</li>
-                <li>Built Django microservices providing sports content like player projections and live scores</li>
-                <li>Moved legacy apps to Docker Swarm on AWS for easier deployment, rollbacks, and scaling</li>
-                <li>Worked both in-office and remotely as part of a distributed team</li>
-            </ul>
+    {% for job in work %}
+        <section class="work-entry">
+            <header>
+                <h4 class="position">
+                    {{ job.position}} at <a href="{{ job.website }}">{{ job.employer }}</a>
+                </h4>
+                <span class="line"></span>
+                <span class="date">{{ job.date }}</span>
+            </header>
+            <section>
+                <ul>
+                    {% for section in job.sections %}
+                        {% for point in section.content %}
+                            <li>{{ point }}</li>
+                        {% endfor %}
+                    {% endfor %}
+                </ul>
+            </section>
+            <section>
+                <h5>Key skills</h5>
+                <div class="work-skills">
+                    {% for skill in job.skills %}
+                        <span class="work-skill">{{ skill }}</span>
+                    {% endfor %}
+                </div>
+            </section>
         </section>
-        <section>
-            <h5>Key skills</h5>
-            <div class="work-skills">
-                <span class="work-skill">Django</span>
-                <span class="work-skill">Python</span>
-                <span class="work-skill">GraphQL</span>
-                <span class="work-skill">Javascript</span>
-                <span class="work-skill">MySQL</span>
-                <span class="work-skill">Redis</span>
-                <span class="work-skill">Microservices</span>
-                <span class="work-skill">Docker Swarm</span>
-                <span class="work-skill">AWS</span>
-                <span class="work-skill">Jenkins</span>
-                <span class="work-skill">Remote work</span>
-            </div>
-        </section>
-    </section>
-    <section class="work-entry">
-        <header>
-            <h4 class="position">
-                Full-stack Software Developer at <a href="https://garvin-allen.com">Garvin-Allen Solutions</a>
-            </h4>
-            <span class="line"></span>
-            <span class="date">2008 &mdash; 2016</span>
-        </header>
-        <section>
-            <ul>
-                <li>Rebuilt parts of legacy Delphi product as a modern C# web app, targeting the same database</li>
-                <li>Used MongoDB to store "work in progress" revisions of documents from legacy system</li>
-                <li>Set up build/CI systems including Atlassian Bamboo for both old and new software</li>
-                <li>Worked with clients to improve the reliability of our installers and related documentation</li>
-            </ul>
-        </section>
-        <section>
-            <h5>Key skills</h5>
-            <div class="work-skills">
-                <span class="work-skill">.NET Framework</span>
-                <span class="work-skill">C#</span>
-                <span class="work-skill">ASP.NET MVC and Web API</span>
-                <span class="work-skill">Javascript</span>
-                <span class="work-skill">SQL Server</span>
-                <span class="work-skill">MongoDB</span>
-                <span class="work-skill">Bamboo CI/CD</span>
-            </div>
-        </section>
-    </section>
+    {% endfor %}
 </section>
 <section id="education">
     <h3>Education</h3>
-    <section class="education-entry">
-        <header>
-            <h4 class="position">
-                Bachelor of Computer Engineering at <a href="https://www.dal.ca/faculty/engineering.html">Dalhousie
-                    University</a>
-            </h4>
-            <span class="line"></span>
-            <span class="date">2005 &mdash; 2009</span>
-        </header>
-        <section>
-            <h5 class='section-title'>Work Term - Protocase Inc</h5>
-            <ul>
-                <li>Wrote python scripts to convert CAD drawings into laser cutter tool paths, saving designer-hours
-                </li>
-            </ul>
+    {% for program in education %}
+        <section class="education-entry">
+            <header>
+                <h4 class="position">
+                    {{ program.program }} at <a href="{{ program.website }}">{{ program.school }}</a>
+                </h4>
+                <span class="line"></span>
+                <span class="date">{{ program.date }}</span>
+            </header>
+            {% for section in program.sections %}
+                <section>
+                    <h5 class='section-title'>{{ section.title }}</h5>
+                    <ul>
+                        {% for point in section.content %}
+                            <li>{{ point }}</li>
+                        {% endfor %}
+                    </ul>
+                </section>
+            {% endfor %}
         </section>
-        <section>
-            <h5 class='section-title'>Work Term - Petroleum Applications of Wireless Systems</h5>
-            <ul>
-                <li>Built interface with PHP and LabView allowing remote researchers to run programs on a testbed for
-                    wireless sensors</li>
-            </ul>
-        </section>
-    </section>
+    {% endfor %}
 </section>

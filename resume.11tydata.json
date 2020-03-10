@@ -1,93 +1,119 @@
 {
-    "language": "en",
-    "name": "Ben MacLeod",
-    "title": "Software Developer",
-    "contact": {
-      "email": "benmacleod@gmail.com",
-      "website": "https://benmacleod.com",
-      "github": "bitswamp",
-      "twitter": "bitswamp"
-    },
-    "about": [
-      "Flexible full-stack developer focused on Python and Javascript based in Halifax, NS.",
-      "Since 2016, I have been building backend services powering <a href=\"https://resulta.com\">resulta's</a> portfolio of sites including <a href=\"https://www.thelinebacker.com\">The Linebacker</a>."
+  "language": "en",
+  "name": "Ben MacLeod",
+  "title": "Software Developer",
+  "contact": {
+    "email": "benmacleod@gmail.com",
+    "website": "https://benmacleod.com",
+    "github": "bitswamp",
+    "twitter": "bitswamp"
+  },
+  "about": [
+    "I'm a full-stack developer living in Halifax, NS and working remotely. My experience is focused on Python, Javascript and .NET. I enjoy building CI/CD pipelines, putting apps in Docker containers, and writing documentation for developers or users.",
+    "Since 2016 I've been building APIs that power <a href=\"https://resulta.com\">resulta's</a> portfolio of sites including <a href=\"https://www.thelinebacker.com\">The Linebacker</a>."
+  ],
+  "skills": {
+    "primary": [
+      "Python",
+      "Javascript/Node.js",
+      "C#/.NET",
+      "GraphQL",
+      "Django"
     ],
-    "skills": {
-      "primary": [
-        "Python",
-        "Javascript/Node.js",
-        "C#/.NET",
-        "GraphQL",
-        "Django"
+    "secondary": [
+      "Jenkins",
+      "Docker",
+      "AWS",
+      "MySQL, SQL Server",
+      "Redis"
+    ]
+  },
+  "work": [
+    {
+      "position": "Backend Software Developer",
+      "employer": "resulta",
+      "website": "https://resulta.com",
+      "date": "2016 &mdash; Present",
+      "business": "resulta provides data feeds and content powering a range of sports media websites.",
+      "business_shorter": "sports media websites and fantasy projections",
+      "sections": [
+        {
+          "title": "",
+          "content": [
+            "Took a GraphQL api from concept to production on time to support new product launch in 2018",
+            "Built Django microservices providing sports content like player projections and live scores",
+            "Moved legacy apps to Docker Swarm on AWS for easier deployment, rollbacks, and scaling",
+            "Worked both in-office and remotely as part of a distributed team"
+          ]
+        }
       ],
-      "secondary": [
-        "Jenkins",
-        "Docker",
+      "skills": [
+        "Django",
+        "Python",
+        "GraphQL",
+        "Javascript",
+        "MySQL",
+        "Redis",
+        "Microservices",
+        "Docker Swarm",
         "AWS",
-        "MySQL, SQL Server",
-        "Redis"
+        "Jenkins",
+        "Remote work"
       ]
     },
-    "work": [
-      {
-        "position": "Backend Software Developer",
-        "employer": "resulta",
-        "website": "https://resulta.com",
-        "date": "2016 &mdash; Present",
-        "business": "resulta provides data feeds and content powering a range of sports media websites.",
-        "business_shorter": "sports media websites and fantasy projections",
-        "sections": [
-          {
-            "title": "Backend services",
-            "content": [
-              "Built modern microservices providing sports content like player projections and live scores",
-              "Took a GraphQL api from concept to production on time to support new product launch in 2018"
-            ]
-          }
-        ]
-      },
-      {
-        "position": "Full-stack Software Developer",
-        "employer": "Garvin-Allen Solutions",
-        "website": "https://garvin-allen.com",
-        "date": "2008 &mdash; 2016",
-        "business": "Garvin-Allen builds insurance policy and claim management software for the Property & Casualty sector.",
-        "business_shorter": "insurance policy and claim management software",
-        "sections": [
-          {
-            "title": "Product rebuild",
-            "content": [
-              "Reimplemented parts of legacy Delphi product as a modern C# web application, targeting the same database",
-              "Used MongoDb to store \"work in progress\" document revisions",
-              "Set up and maintained build/CI systems including Atlassian Bamboo for both old and new software"
-            ]
-          }
-        ]
-      }
-    ],
-    "education": [
-      {
-        "program": "Bachelor of Computer Engineering",
-        "school": "Dalhousie University",
-        "location": "Halifax, NS",
-        "date": "2005 &mdash; 2009",
-        "sections": [
-          {
-            "title": "Work Term - Protocase Inc",
-            "date": "2008",
-            "content": [
-              "Wrote python scripts to convert CAD drawings into laser cutter tool paths, saving designer-hours"
-            ]
-          },
-          {
-            "title": "Work Term - Petroleum Applications of Wireless Systems",
-            "date": "2007",
-            "content": [
-              "Built interface with PHP and LabView allowing remote researchers to run programs on a testbed for wireless sensors"
-            ]
-          }
-        ]
-      }
-    ]
-  }
-  
+    {
+      "position": "Full-stack Software Developer",
+      "employer": "Garvin-Allen Solutions",
+      "website": "https://garvin-allen.com",
+      "date": "2008 &mdash; 2016",
+      "business": "Garvin-Allen builds insurance policy and claim management software for the Property & Casualty sector.",
+      "business_shorter": "insurance policy and claim management software",
+      "sections": [
+        {
+          "title": "",
+          "content": [
+            "Rebuilt parts of legacy Delphi product as a modern C# web app, targeting the same database",
+            "Used MongoDB to store \"work in progress\" revisions of documents from legacy system",
+            "Set up build/CI systems including Atlassian Bamboo for both old and new software",
+            "Worked with clients to improve the reliability of our installers and related documentation"
+          ]
+        }
+      ],
+      "skills": [
+        ".NET Framework",
+        "C#",
+        "ASP.NET MVC",
+        "ASP.NET Web API",
+        "Javascript",
+        "SQL Server",
+        "MongoDB",
+        "Bamboo CI/CD"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "program": "Bachelor of Computer Engineering",
+      "school": "Dalhousie University",
+      "website": "https://www.dal.ca/faculty/engineering.html",
+      "location": "Halifax, NS",
+      "date": "2005 &mdash; 2009",
+      "sections": [
+        {
+          "title": "Work Term - Protocase Inc",
+          "date": "2008",
+          "content": [
+            "Wrote python scripts to convert CAD drawings into laser cutter tool paths, saving designer-hours"
+          ]
+        },
+        {
+          "title": "Work Term - Petroleum Applications of Wireless Systems",
+          "date": "2007",
+          "content": [
+            "Built interface with PHP and LabView allowing remote researchers to run programs on a testbed for wireless sensors"
+          ]
+        }
+      ]
+    }
+  ]
+}
