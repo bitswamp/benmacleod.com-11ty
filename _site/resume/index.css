@@ -1,5 +1,15 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:400,700);
 
+.feather {
+    width: 24px;
+    height: 24px;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    fill: none;
+}
+
 html {
     margin: 0;
     padding: 0;
