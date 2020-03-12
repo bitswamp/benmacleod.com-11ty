@@ -1,5 +1,20 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,600);
 
+.feather {
+    width: 24px;
+    height: 24px;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    fill: none;
+}
+
+.feather-large {
+    width: 40px;
+    height: 40px;
+}
+
 html {
     height: 100%;
     margin: 0;
@@ -66,12 +81,9 @@ a {
     transition: border-color 0.5s ease;
 }
 
-a span.fa {
+a svg {
     color: #1a8bf0;
-    display: inline-block;
-    font-size: 1.2em;
     padding-right: 0.2em;
-    /* padding-top: 0.1em; */
 }
 
 a:hover {
