@@ -84,6 +84,7 @@ a {
 a svg {
     color: #1a8bf0;
     padding-right: 0.2em;
+    vertical-align: text-top;
 }
 
 a:hover {
